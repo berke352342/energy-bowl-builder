@@ -22,6 +22,6 @@ const ingredients = {
         });
 
      result.innerHTML =
-          "Total Price: " + totalPrice + " TL <br>" +
-          "Total Calories: " + totalCalories +  " kcal";
+          "Total Price: $" + totalPrice.toFixed(2) + "<br>" +
+          "Total Calories: " + totalCalories + " kcal";
 });
