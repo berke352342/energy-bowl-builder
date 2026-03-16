@@ -1,0 +1,83 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: Arial, sans-serif;
+background:#c7d0cb;
+text-align:center;
+padding:50px;
+}
+
+/* Title */
+h1{
+color:#2f6b4f;
+font-size:48px;
+margin-bottom:40px;
+}
+
+/* Form Card */
+form{
+background:#f5f5f5;
+width:400px;
+margin:auto;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Section titles */
+label{
+display:block;
+font-weight:bold;
+color:#2f6b4f;
+margin-top:15px;
+margin-bottom:10px;
+}
+
+/* Dropdown */
+select{
+padding:8px 12px;
+border-radius:10px;
+border:2px solid #333;
+font-size:16px;
+margin-bottom:20px;
+}
+
+/* Checkbox + Radio */
+input[type="checkbox"],
+input[type="radio"]{
+accent-color:#2f7d53;
+margin-right:6px;
+}
+
+/* Button */
+button{
+background:#2f7d53;
+color:white;
+border:none;
+padding:14px 28px;
+border-radius:12px;
+cursor:pointer;
+font-size:18px;
+margin-top:20px;
+transition:0.3s;
+}
+
+/* Button Hover */
+button:hover{
+background:#1f5c3a;
+transform:scale(1.05);
+}
+
+/* Output box */
+#output{
+margin:35px auto;
+width:400px;
+height:70px;
+background:#f5f5f5;
+border-radius:16px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
