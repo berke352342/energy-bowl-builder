@@ -1,27 +1,47 @@
-const ingredients = {
-     rice: { price: 10, calories: 200 },
-     chicken: { price: 20, calories: 250 },
-     avocado: { price: 15, calories: 150 },
-     tomato: { price: 5, calories: 30 }
-   };
+class EnergyBowl  {
 
- const button = document.getElementById("calculateBtn");
- const result = document.getElementById("result");
+constructor(base, fruits, size){
 
- button.addEventListener("click", function() {
+this.base = base;
+this.fruits = fruits;
+this.size = size;
 
-      let totalPrice = 0;
-      let totalCalories = 0;
+}
 
-  const selected = document.querySelectorAll("input[type='checkbox']:checked");
+getDescription(){
 
-      selected.forEach(function(item) {
-          const value = item.value;
-          totalPrice += ingredients[value].price;
-          totalCalories += ingredients[value].calories;
-        });
+return "Your Energy Bowl:<br>" +
+"Base: " + this.base + "<br>" +
+"Fruits: " + this.fruits.join(", ") + "<br>" +
+"Size: " + this.size;
 
-     result.innerHTML =
-          "Total Price: $" + totalPrice.toFixed(2) + "<br>" +
-          "Total Calories: " + totalCalories + " kcal";
+     }
+
+}
+
+  const button = document.getElementById("calculateBtn");
+  const result = document.getElementById("result");
+
+button.addEventListener("click", function(){
+
+const base = document.getElementById("base").value;
+
+const fruitCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+let fruits = [];
+
+fruitCheckboxes.forEach(function(cb){
+fruits.push(cb.value);
 });
+
+  const sizeRadio = document.querySelector('input[name="size"]:checked');
+  let size = "";
+
+if(sizeRadio){
+size = sizeRadio.value;
+   }
+
+ const bowl = new EnergyBowl(base, fruits, size);
+
+    result.innerHTML = bowl.getDescription();
+
+  });
