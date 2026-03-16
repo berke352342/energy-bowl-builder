@@ -73,11 +73,12 @@ transform:scale(1.05);
 }
 
 /* Output box */
-#output{
+#result{
 margin:35px auto;
 width:400px;
-height:70px;
+min-height:70px;
 background:#f5f5f5;
 border-radius:16px;
 box-shadow:0 6px 18px rgba(0,0,0,0.08);
+padding:15px;
 }

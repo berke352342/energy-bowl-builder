@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy Bowl Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Build Your Energy Bowl</h1>
+
+  <form>
+    <label for="base">Choose Base</label>
+    <select id="base">
+      <option value="rice">Rice</option>
+      <option value="chicken">Chicken</option>
+      <option value="avocado">Avocado</option>
+      <option value="tomato">Tomato</option>
+    </select>
+
+    <label>Choose Fruits</label>
+    <input type="checkbox" value="rice"> Rice
+    <input type="checkbox" value="chicken"> Chicken
+    <input type="checkbox" value="avocado"> Avocado
+    <input type="checkbox" value="tomato"> Tomato
+
+    <label>Size</label>
+    <input type="radio" name="size" value="Small"> Small
+    <input type="radio" name="size" value="Medium"> Medium
+    <input type="radio" name="size" value="Large"> Large
+
+    <br><br>
+
+    <button type="button" id="calculateBtn">Place Order</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
